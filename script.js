@@ -21,3 +21,20 @@
  el('path',{d:'M505 224 L510 231 L515 224',fill:'none',stroke:'#e4e9ef','stroke-width':1.5});
  const force=el('text',{x:518,y:212,fill:'#e4e9ef','font-size':14,'font-family':'Arial, sans-serif'});force.textContent='F';
 })();
+
+// Progressive enhancement: figure links also work without JavaScript.
+(() => {
+ const dialog = document.querySelector('.figure-dialog');
+ if (!dialog || typeof dialog.showModal !== 'function') return;
+ document.querySelectorAll('[data-figure]').forEach(link => link.addEventListener('click', event => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const source = link.querySelector('img');
+  dialog.querySelector('img').src = link.href;
+  dialog.querySelector('img').alt = source.alt;
+  dialog.querySelector('p').textContent = link.closest('figure').querySelector('figcaption').innerText;
+  dialog.showModal();
+ }));
+ dialog.querySelector('button').addEventListener('click', () => dialog.close());
+ dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if(event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); }});
+})();
