@@ -30,8 +30,18 @@
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   const source = link.querySelector('img');
-  dialog.querySelector('img').src = link.href;
-  dialog.querySelector('img').alt = source.alt;
+  dialog.querySelector('.expanded-crop')?.remove();
+  const mainImage = dialog.querySelector('img');
+  mainImage.hidden = link.hasAttribute('data-crop');
+  if (link.hasAttribute('data-crop')) {
+    const expanded = document.createElement('div');
+    expanded.className = 'expanded-crop';
+    expanded.append(link.querySelector('.scientific-crop').cloneNode(true));
+    dialog.insertBefore(expanded, dialog.querySelector('p'));
+  } else {
+    mainImage.src = link.href;
+    mainImage.alt = source.alt;
+  }
   dialog.querySelector('p').textContent = link.closest('figure').querySelector('figcaption').innerText;
   dialog.showModal();
  }));
