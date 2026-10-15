@@ -5,11 +5,11 @@
  function el(tag, attrs) {const node = document.createElementNS(ns,tag); for(const [key,value] of Object.entries(attrs))node.setAttribute(key,String(value)); svg.appendChild(node); return node;}
  const cols=20,rows=5;
  const shape=t=>t*t*(3-t)/2;
- const point=(i,j)=>{const t=i/cols;return [65+t*420+(j/rows)*18,108+(j/rows)*73+shape(t)*90];};
+ const point=(i,j)=>{const t=i/cols;return [63+t*422+(j/rows)*18*t,108+(j/rows)*73+shape(t)*90];};
  const palette=[[36,111,209],[32,179,190],[189,213,101],[255,189,79],[250,98,56]];
  function colour(t){const n=Math.min(t*4,3.999),i=Math.floor(n),f=n-i;return 'rgb('+palette[i].map((v,k)=>Math.round(v+(palette[i+1][k]-v)*f)).join(',')+')';}
  // Faint undeformed reference and clamped support.
- el('path',{d:'M65 108 L485 108 L503 181 L83 181 Z',fill:'none',stroke:'#657281','stroke-dasharray':'4 5','stroke-width':1});
+ el('path',{d:'M63 108 L485 108 L503 181 L63 181 Z',fill:'none',stroke:'#657281','stroke-dasharray':'4 5','stroke-width':1});
  for(let i=0;i<8;i++)el('line',{x1:43,y1:90+i*14,x2:62,y2:76+i*14,stroke:'#798390','stroke-width':1});
  el('line',{x1:63,y1:84,x2:63,y2:202,stroke:'#d6dce4','stroke-width':2});
  for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){
