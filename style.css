@@ -27,3 +27,7 @@
 .fixed-three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end}
 .expanded-crop{width:min(1000px,82vw);max-height:72vh;overflow:auto}.expanded-crop .scientific-crop{width:100%}.figure-dialog>img[hidden]{display:none}
 @media(max-width:620px){.segmentation-pair,.fixed-three{grid-template-columns:1fr;gap:28px}.fixed-three{max-width:520px}.expanded-crop{width:82vw}}
+
+/* Requested label removal, retaining the underlying contour geometry. */
+.crop-side-mask{position:absolute;left:45.1%;top:92.06%;width:25%;height:7.94%;background:#fff}
+.no-strain-legend{clip-path:polygon(18% 0,100% 0,100% 100%,0 100%,0 58%,18% 58%);height:auto!important}
