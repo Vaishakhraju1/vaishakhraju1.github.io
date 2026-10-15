@@ -40,6 +40,7 @@
     dialog.insertBefore(expanded, dialog.querySelector('p'));
   } else {
     mainImage.src = link.href;
+    mainImage.className = source.className;
     mainImage.alt = source.alt;
   }
   dialog.querySelector('p').textContent = link.closest('figure').querySelector('figcaption').innerText;
