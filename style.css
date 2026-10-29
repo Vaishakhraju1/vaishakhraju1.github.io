@@ -31,3 +31,16 @@
 /* Requested label removal, retaining the underlying contour geometry. */
 .crop-side-mask{position:absolute;left:45.1%;top:92.06%;width:25%;height:7.94%;background:#fff}
 .no-strain-legend{clip-path:polygon(18% 0,100% 0,100% 100%,0 100%,0 58%,18% 58%);height:auto!important}
+
+/* Detailed engineering case studies from doctoral and master's work. */
+.thesis-project>.project-lead{font-size:20px;line-height:1.7;max-width:980px;color:var(--muted)}
+.thesis-scope{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:28px 0}
+.thesis-scope h4,.thesis-findings h4{font-size:19px;margin:0 0 12px}.thesis-scope p{color:var(--muted);margin:0;line-height:1.8}
+.thesis-figures{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:32px 0}.thesis-figures figure{margin:0;min-width:0}
+.thesis-figures img{height:340px;object-fit:contain;background:#fff;padding:12px}.thesis-figures figcaption p{font-size:13px}
+.thesis-findings{padding:24px 28px;background:#f2f4f6;margin:28px 0}.thesis-findings>p,.thesis-findings li{color:var(--muted);line-height:1.8}
+.thesis-findings ul{padding-left:22px;margin-bottom:0}.thesis-findings li+li{margin-top:12px}
+.thesis-table-scroll{overflow-x:auto}.thesis-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;text-align:left}
+.thesis-table caption{text-align:left;font-size:12px;color:var(--muted);margin-bottom:10px}.thesis-table th,.thesis-table td{padding:12px 16px;border-bottom:1px solid #cbd1d8}
+.thesis-table thead{background:#e5e9ed}.thesis-table tbody th{font-weight:500}.thesis-project .evidence-note{font-size:12px}
+@media(max-width:620px){.thesis-scope,.thesis-figures{grid-template-columns:1fr;gap:25px}.thesis-project>.project-lead{font-size:18px}.thesis-figures img{height:auto;max-height:370px}.thesis-findings{padding:22px 18px}.thesis-table th,.thesis-table td{padding:10px;font-size:13px}}
