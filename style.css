@@ -63,3 +63,11 @@
 .pressure-stress-pair .figure-zoom img{height:240px;object-fit:contain;object-position:center top}
 @media(min-width:1000px){.pressure-stress-pair .figure-zoom img{height:320px}}
 @media(max-width:620px){.pressure-stress-pair .figure-zoom img{height:auto;aspect-ratio:auto}}
+
+/* Compact, equally aligned blue marlin figure frames; enlarged views retain their crops. */
+.billfish-figures{grid-template-columns:1fr 1fr;max-width:920px;margin:30px auto;gap:28px;align-items:start}
+.billfish-figures .marlin-figure-stage{display:flex;align-items:center;justify-content:center;height:240px;padding:14px;border:0;background:#fff;text-align:initial}
+.billfish-figures .marlin-ct-panel .scientific-crop{width:min(100%,175px);flex:none}
+.billfish-figures .marlin-strain-panel .scientific-crop{width:100%;max-width:370px;flex:none}
+.billfish-figures .zoom-label{margin:0}
+@media(max-width:620px){.billfish-figures{grid-template-columns:1fr;max-width:440px}.billfish-figures .marlin-figure-stage{height:220px}.billfish-figures .marlin-ct-panel .scientific-crop{width:min(100%,160px)}}
