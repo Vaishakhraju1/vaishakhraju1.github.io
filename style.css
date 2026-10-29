@@ -71,3 +71,10 @@
 .billfish-figures .marlin-strain-panel .scientific-crop{width:100%;max-width:370px;flex:none}
 .billfish-figures .zoom-label{margin:0}
 @media(max-width:620px){.billfish-figures{grid-template-columns:1fr;max-width:440px}.billfish-figures .marlin-figure-stage{height:220px}.billfish-figures .marlin-ct-panel .scientific-crop{width:min(100%,160px)}}
+
+/* Larger blue marlin figures with matching display frames. */
+.billfish-figures{max-width:1280px}
+.billfish-figures .marlin-figure-stage{height:480px;padding:14px}
+.billfish-figures .marlin-ct-panel .scientific-crop{width:min(100%,350px)}
+.billfish-figures .marlin-strain-panel .scientific-crop{width:100%;max-width:740px}
+@media(max-width:620px){.billfish-figures .marlin-figure-stage{height:400px}.billfish-figures .marlin-ct-panel .scientific-crop{width:min(100%,310px)}}
