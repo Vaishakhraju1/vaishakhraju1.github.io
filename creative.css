@@ -19,7 +19,7 @@
 .creative-portfolio .hero .button{background:#f1cd95;color:#20373e;border-radius:3px;font-weight:700;gap:35px;box-shadow:0 8px 30px #0002}
 .creative-portfolio .hero .button:hover{background:#ffe3b7}.hero-secondary{font-size:13px;border-bottom:1px solid #ffffff50;padding-block:7px}
 .hero-social{display:flex;gap:26px;font-size:12px;color:#c2d4d5;margin-top:36px}.hero-social a:hover{color:white}
-.creative-portfolio .model-panel{background:linear-gradient(145deg,#112e3888,#172c3388);border:1px solid #ffffff30;border-radius:200px 200px 8px 8px;padding-top:60px;backdrop-filter:blur(10px);box-shadow:0 25px 80px #0002;transform:rotate(2deg)}
+.creative-portfolio .model-panel{background:linear-gradient(145deg,#112e3888,#172c3388);border:1px solid #ffffff30;border-radius:200px 200px 8px 8px;padding-top:60px;backdrop-filter:blur(10px);box-shadow:0 25px 80px #0002;transform:none}
 .creative-portfolio .panel-top{justify-content:center;font-size:9px;color:#bdd2d4}.creative-portfolio .panel-top>span:last-child{display:none}
 .creative-portfolio .model-title{font-size:36px;margin:26px 0 -12px;text-align:center;line-height:1.13}.model-title em{font-family:Georgia,serif;color:#f2c78e;font-weight:400}
 .creative-portfolio #mesh{margin-top:5px}.creative-portfolio .legend{max-width:170px}.creative-portfolio .model-note{font-size:10px;color:#c0d0d3;margin:20px 0}.creative-portfolio .panel-bottom{border-color:#ffffff20;color:#d0dfe0}
